@@ -3,148 +3,241 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("./assets/fonts/fraunces/Fraunces.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Fraunces";
+    src: url("./assets/fonts/fraunces/Fraunces.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Fraunces";
-  src: url("./assets/fonts/fraunces/static/Fraunces-semiBold.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Fraunces";
+    src: url("./assets/fonts/fraunces/static/Fraunces-semiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/manrope/static/Manrope-Regular.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Manrope";
+    src: url("./assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/manrope/Manrope.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Manrope";
+    src: url("./assets/fonts/manrope/Manrope.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
 }
 
-:root {
-  font-family: "Manrope", serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+body {
+    font-family: "Manrope", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+@media screen(lg) {
+    body {
+        font-size: 18px;
+    }
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 @layer components {
-  .button-ordinary {
-    @apply bg-eucalyptus text-dark-purple font-bold text-base pt-3 pb-3 pl-2 pr-2;
-  }
+    .button-ordinary {
+        @apply cursor-pointer bg-eucalyptus text-dark-purple font-bold text-base pt-3 pb-3 pl-6 pr-6
+        md:pt-4 md:pb-4
 
-  .button-secondary {
-    @apply inline-flex justify-center items-center text-white align-baseline font-bold text-lg border-b-eucalyptus border-b-2 pt-2 pb-2 pl-0 pr-0 max-h-[32px] hover:text-eucalyptus;
-  }
+        hover:bg-transparent hover:text-white hover:border hover:border-eucalyptus;
+    }
 
-  .dark-bg {
-    @apply bg-dark-purple text-white;
-  }
+    .button-secondary {
+        @apply inline-flex justify-center items-center text-white align-baseline
+        font-bold text-lg border-b-eucalyptus border-b-2 pt-2 pb-2 pl-0 pr-0 max-h-[32px]
 
-  .light-bg {
-    @apply bg-ghost-white text-dark-purple;
-  }
+        hover:text-eucalyptus;
+    }
 
-  .header {
-    position: relative;
-  }
+    .dark-bg {
+        @apply bg-dark-purple text-white;
+    }
 
-  .header:after {
-    position: absolute;
-    display: block;
-    content: "";
-    background-image: url("./assets/images/image-hero.webp");
-    width: 310px;
-    height: 184px;
-    background-size: cover;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -92px;
-  }
+    .light-bg {
+        @apply bg-ghost-white text-dark-purple;
+    }
 
-  .my-list {
-    counter-reset: my-counter;
-  }
 
-  .my-list li {
-    counter-increment: my-counter;
-  }
+    .header:after {
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url("./assets/images/image-hero.webp");
+        width: 310px;
+        height: 184px;
+        background-size: cover;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -92px;
+    }
 
-  .my-list li:before {
-    font-family: "Fraunces", serif;
-    content: counter(my-counter);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 46px;
-    text-align: center;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-    border: 1px solid #584d62;
-    color: #24053e;
-    font-size: 20px;
-    line-height: 36px;
-    border-radius: 50%;
-  }
+    @media screen(md) {
+        .header-wrapper:before {
+            position: absolute;
+            display: block;
+            content: "";
+            background: url("./assets/images/bg-pattern-3.svg") no-repeat;
+            width: 310px;
+            height: 270px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -18%;
+        }
 
-  .founder-section {
-    position: relative;
-    padding-top: 281px;
-    z-index: 0;
-  }
+        .header-wrapper:after {
+            position: absolute;
+            display: block;
+            content: "";
+            background: url("./assets/images/bg-pattern-1.svg") no-repeat;
+            width: 140px;
+            height: 112px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -18%;
+        }
+    }
 
-  .founder-section:before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 281px;
-    background-image: url("./assets/images/image-founder.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 33px;
-    z-index: -1;
-  }
+
+    .my-list {
+        counter-reset: my-counter;
+    }
+
+    .my-list li {
+        counter-increment: my-counter;
+    }
+
+    .my-list li:before {
+        content: counter(my-counter);
+        font-family: "Fraunces", serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        height: 46px;
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+        border: 1px solid #584d62;
+        color: #24053e;
+        font-size: 20px;
+        line-height: 36px;
+        border-radius: 50%;
+    }
+
+    @media screen(md) {
+        .my-list li:before {
+            transform: translateY(50%);
+        }
+    }
+
+    @media screen(lg) {
+        .my-list {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .my-list li:before {
+            transform: none;
+            margin-bottom: 2em;
+        }
+    }
+
+    .founder-section {
+        position: relative;
+        padding-top: 281px;
+        z-index: 0;
+    }
+
+    .founder-section:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 281px;
+        background-image: url("./assets/images/image-founder.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 33px;
+        z-index: -1;
+    }
+
+    @media screen(md) {
+        .founder-section {
+            display: flex;
+            justify-content: right;
+            padding-top: 142px;
+            padding-bottom: 80px;
+            max-width: 711px;
+            margin: 0 auto;
+        }
+
+        .founder-section:before {
+            top: 0;
+            background-position: left;
+        }
+
+        .founder-section:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 193px;
+            background-image: url("./assets/images/bg-pattern-3.svg");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+
+    @media screen(lg) {
+        .founder-section {
+            max-width: 1112px;
+            padding-top: 213px;
+        }
+
+        .founder-section:before {
+            height: 477px;
+        }
+
+        .founder-section:after {
+            background-position-x: 90%;
+        }
+    }
 }
 
 @layer utilities {
-  .container {
-    @apply max-w-[1112px] m-auto pl-[16px] pr-[16px] md:pl-0 md:pr-0;
-  }
-
-  .line-height-n {
-    line-height: 50px;
-  }
+    .container {
+        @apply m-auto md:pl-0 md:max-w-[90%] md:pr-0 lg:max-w-[1112px] lg:pl-[16px] lg:pr-[16px] ;
+    }
 }
