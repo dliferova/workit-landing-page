@@ -83,17 +83,10 @@ body {
 
     /* Button */
     .c-button-ordinary {
-        @apply cursor-pointer bg-eucalyptus text-dark-purple font-bold text-base pt-3 pb-3 pl-6 pr-6
+        @apply border border-eucalyptus cursor-pointer bg-eucalyptus text-dark-purple font-bold text-base pt-3 pb-3 pl-6 pr-6
         md:pt-4 md:pb-4
 
-        hover:bg-transparent hover:text-white hover:border hover:border-eucalyptus;
-    }
-
-    .c-button-secondary {
-        @apply inline-flex justify-center items-center text-white align-baseline
-        font-bold text-lg border-b-eucalyptus border-b-2 pt-2 pb-2 pl-0 pr-0 max-h-[32px]
-
-        hover:text-eucalyptus;
+        hover:bg-transparent hover:text-white;
     }
 
     /* Sections */
@@ -133,7 +126,7 @@ body {
         }
 
         .c-s-founder:after {
-            @apply content-[''] absolute block w-[100%] h-[193px] bg-pattern-3
+            @apply content-[''] absolute block w-[170px] h-[193px] bg-pattern-3
             bg-right bg-contain bg-no-repeat z-[0] bottom-0
         }
     }

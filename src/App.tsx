@@ -19,7 +19,7 @@ function App() {
                     />
                   </li>
                   <li>
-                    <button className="c-button-secondary">
+                    <button className="c-button-ordinary">
                       Apply for access
                     </button>
                   </li>
@@ -40,7 +40,9 @@ function App() {
                 </p>
               </div>
               <div className="pb-10">
-                <button className="c-button-ordinary">Learn more</button>
+                <a href="#" className="c-button-ordinary">
+                  Learn more
+                </a>
               </div>
             </div>
           </section>
@@ -112,9 +114,7 @@ function App() {
                 your company. Apply for access below and I’ll be in touch to
                 schedule a call.
               </p>
-              <button className="c-button-ordinary w-[174px]">
-                Apply for access
-              </button>
+              <button className="c-button-ordinary">Apply for access</button>
             </div>
           </section>
         </div>
@@ -131,17 +131,17 @@ function App() {
           />
           <ul className="inline-flex gap-6">
             <li>
-              <a>
+              <a href="#" className="cursor-pointer">
                 <img src="src/assets/images/icon-facebook.svg" />
               </a>
             </li>
             <li>
-              <a>
+              <a href="#" className="cursor-pointer">
                 <img src="src/assets/images/icon-instagram.svg" />
               </a>
             </li>
             <li>
-              <a>
+              <a href="#" className="cursor-pointer">
                 <img src="src/assets/images/icon-twitter.svg" />
               </a>
             </li>
