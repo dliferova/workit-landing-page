@@ -17,6 +17,13 @@ export default {
         fraunces: ["Fraunces", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
       },
+      backgroundImage: {
+        "pattern-1": 'url("src/assets/images/bg-pattern-1.svg")',
+        "pattern-2": 'url("src/assets/images/bg-pattern-2.svg")',
+        "pattern-3": 'url("src/assets/images/bg-pattern-3.svg")',
+        hero: 'url("./assets/images/image-hero.webp")',
+        "founder-avatar": 'url("src/assets/images/image-founder.webp")',
+      },
     },
   },
   plugins: [],
