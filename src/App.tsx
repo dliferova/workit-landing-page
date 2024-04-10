@@ -132,17 +132,17 @@ function App() {
           <ul className="inline-flex gap-6">
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="src/assets/images/icon-facebook.svg" />
+                <img src="/public/icon-facebook.svg" />
               </a>
             </li>
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="src/assets/images/icon-instagram.svg" />
+                <img src="/public/icon-instagram.svg" />
               </a>
             </li>
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="src/assets/images/icon-twitter.svg" />
+                <img src="/public/icon-twitter.svg" />
               </a>
             </li>
           </ul>
