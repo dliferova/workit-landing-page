@@ -1,3 +1,9 @@
+import facebookIcon from "./assets/icon-facebook.svg"
+import instIcon from "./assets/icon-instagram.svg"
+import twitterIcon from "./assets/icon-twitter.svg"
+import workItLogoDark from "./assets/logo-dark.svg"
+import workItLogoLight from "./assets/logo-light.svg"
+
 function App() {
   return (
     <>
@@ -12,7 +18,7 @@ function App() {
                 <ul className="flex flex-row justify-between items-center">
                   <li>
                     <img
-                      src="src/assets/images/logo-light.svg"
+                      src={workItLogoLight}
                       width="97"
                       height="26"
                       alt="Workit logo"
@@ -123,8 +129,8 @@ function App() {
       <footer className="bg-white pt-12 pb-12">
         <div className="u-container flex flex-col items-center">
           <img
+            src={workItLogoDark}
             className="mb-9"
-            src="src/assets/images/logo-dark.svg"
             width="96"
             height="25"
             alt="Workit logo"
@@ -132,17 +138,17 @@ function App() {
           <ul className="inline-flex gap-6">
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="/public/icon-facebook.svg" />
+                <img src={facebookIcon} alt="Facebook icon" />
               </a>
             </li>
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="/public/icon-instagram.svg" />
+                <img src={instIcon} alt="Instagram icon" />
               </a>
             </li>
             <li>
               <a href="#" className="cursor-pointer">
-                <img src="/public/icon-twitter.svg" />
+                <img src={twitterIcon} alt="Twitter icon" />
               </a>
             </li>
           </ul>
